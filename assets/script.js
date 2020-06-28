@@ -11,7 +11,7 @@ function search(city) {
 
     $("#city").text(result.name);
     $("#date").text(date);
-    $("#icon").attr("src", "http://openweathermap.org/img/wn/" + result.weather[0].icon + "@2x.png");
+    $("#icon").attr("src", "https://openweathermap.org/img/wn/" + result.weather[0].icon + "@2x.png");
     $("#temp").text("Tempature: " + result.main.temp + " F");
     $("#hmdt").text("Humidity: " + result.main.humidity + "%");
     $("#wind").text("Wind Speed: " + result.wind.speed + " MPH");
@@ -23,7 +23,7 @@ function search(city) {
 
 
     function populateUVIndex(lon, lat) {
-      var uvURL = "http://api.openweathermap.org/data/2.5/uvi?appid=e5277dcd0f9699778995e6a15411d5e9&lat=" + lat + "&lon=" + lon;
+      var uvURL = "https://api.openweathermap.org/data/2.5/uvi?appid=e5277dcd0f9699778995e6a15411d5e9&lat=" + lat + "&lon=" + lon;
 
       $.ajax({
         url: uvURL,
@@ -49,7 +49,7 @@ function search(city) {
     }
   });
 
-  var forcastURL = "http://api.openweathermap.org/data/2.5/forecast?q=" + city + ",usa&units=imperial&appid=e5277dcd0f9699778995e6a15411d5e9";
+  var forcastURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + ",usa&units=imperial&appid=e5277dcd0f9699778995e6a15411d5e9";
 
   $.ajax({
     url: forcastURL,
@@ -58,27 +58,27 @@ function search(city) {
     // forcast day 1
     $("#date-1").text(date1);
     $("#temp-1").text("Tempature: " + info.list[3].main.temp + " F");
-    $("#icon-1").attr("src", "http://openweathermap.org/img/wn/" + info.list[3].weather[0].icon + ".png");
+    $("#icon-1").attr("src", "https://openweathermap.org/img/wn/" + info.list[3].weather[0].icon + ".png");
     $("#hmdt-1").text("Humidity: " + info.list[3].main.humidity + "%");
     // focast day 2
     $("#date-2").text(date2);
     $("#temp-2").text("Tempature: " + info.list[11].main.temp + " F");
-    $("#icon-2").attr("src", "http://openweathermap.org/img/wn/" + info.list[11].weather[0].icon + ".png");
+    $("#icon-2").attr("src", "https://openweathermap.org/img/wn/" + info.list[11].weather[0].icon + ".png");
     $("#hmdt-2").text("Humidity: " + info.list[11].main.humidity + "%");
     // forcast day 3
     $("#date-3").text(date3);
     $("#temp-3").text("Tempature: " + info.list[19].main.temp + " F");
-    $("#icon-3").attr("src", "http://openweathermap.org/img/wn/" + info.list[19].weather[0].icon + ".png");
+    $("#icon-3").attr("src", "https://openweathermap.org/img/wn/" + info.list[19].weather[0].icon + ".png");
     $("#hmdt-3").text("Humidity: " + info.list[19].main.humidity + "%");
     // forcast day 4
     $("#date-4").text(date4);
     $("#temp-4").text("Tempature: " + info.list[27].main.temp + " F");
-    $("#icon-4").attr("src", "http://openweathermap.org/img/wn/" + info.list[27].weather[0].icon + ".png");
+    $("#icon-4").attr("src", "https://openweathermap.org/img/wn/" + info.list[27].weather[0].icon + ".png");
     $("#hmdt-4").text("Humidity: " + info.list[27].main.humidity + "%");
     // forcast day 5
     $("#date-5").text(date5);
     $("#temp-5").text("Tempature: " + info.list[35].main.temp + " F");
-    $("#icon-5").attr("src", "http://openweathermap.org/img/wn/" + info.list[35].weather[0].icon + ".png");
+    $("#icon-5").attr("src", "https://openweathermap.org/img/wn/" + info.list[35].weather[0].icon + ".png");
     $("#hmdt-5").text("Humidity: " + info.list[35].main.humidity + "%");
 });
 
