@@ -10,11 +10,23 @@ body {
     height: 675px;
 }
 
+#city {
+    font-weight: bold;
+    font-size: 22px;
+}
+
+#date {
+    font-weight: bold;
+    font-size: 22px;
+}
 .weather-conditions {
     list-style-type: none;
     padding: 0;
 }
 
+.card {
+    margin: 0px 15px 0px 15px;
+}
 .col-md-3 {
     background-color: #ebebeb;
 }
@@ -23,10 +35,7 @@ h1 {
     color: white;
 }
 
-#searchCityBtn {
-    transition: 250ms ease-in-out;
-    margin-top: 5%;
-}
+
  .card {
      border: none;
  }
@@ -35,7 +44,32 @@ h1 {
     margin: 0.5rem 0;
 }
 .btn-dark {
-    background-color: blue;
+    background-color: #007bff;
     transition: 250ms ease-in-out;
-    margin-top: 5%;
+   margin-left: 2%;
+}
+.uv-low {
+    background-color: green;
+}
+  
+.uv-mod {
+    background-color: yellow;
+}
+  
+.uv-high {
+    background-color: orange;
+}
+  
+.uv-very-high {
+    background-color: red;
+}
+  
+.uv-ext {
+    background-color: violet;
+}
+  
+.uv-low,
+.uv-very-high,
+.uv-ext {
+    color: white;
 }
