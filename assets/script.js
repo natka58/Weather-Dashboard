@@ -37,13 +37,9 @@ function search(city) {
         $("#uv").text(UVIndex);
         $("#uv").text("UV Index: " + data.value);
         if (UVIndex < 3) {
-          $("#uv").attr("data-uv-level", "uv-low");
+          $("#uv").attr("data-uv-level", "uv-fave");
         } else if (UVIndex < 6) {
           $("#uv").attr("data-uv-level", "uv-mod");
-        } else if (UVIndex < 8) {
-          $("#uv").attr("data-uv-level", "uv-high");
-        } else if (UVIndex < 11) {
-          $("#uv").attr("data-uv-level", "uv-very-high");
         } else {
           $("#uv").attr("data-uv-level", "uv-ext");
         }
@@ -84,8 +80,7 @@ function search(city) {
     $("#temp-5").text("Tempature: " + info.list[35].main.temp + " F");
     $("#icon-5").attr("src", "http://openweathermap.org/img/wn/" + info.list[35].weather[0].icon + ".png");
     $("#hmdt-5").text("Humidity: " + info.list[35].main.humidity + "%");
-
-  });
+});
 
   var date = moment().format("(M/D/YYYY)");
   var date1 = moment().add(1, "day").format("(M/D/YYYY)");
@@ -115,11 +110,9 @@ function buttons() {
     a.addClass("btn btn-primary");
     a.attr("data-name", cities[i]);
     a.text(cities[i]);
-
-    $("#buttons-view").append(a);
+ $("#buttons-view").append(a);
   }
 }
 
 $(document).on("click", ".btn btn-primary", search);
-
 buttons();
