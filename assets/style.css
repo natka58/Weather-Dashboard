@@ -1,0 +1,41 @@
+body {
+    background-color: white;
+}
+
+.search {
+    height: 675px;
+}
+
+.currentWeather {
+    height: 675px;
+}
+
+.weather-conditions {
+    list-style-type: none;
+    padding: 0;
+}
+
+.col-md-3 {
+    background-color: #ebebeb;
+}
+h1 {
+    background-color: black;
+    color: white;
+}
+
+#searchCityBtn {
+    transition: 250ms ease-in-out;
+    margin-top: 5%;
+}
+ .card {
+     border: none;
+ }
+
+#forecast {
+    margin: 0.5rem 0;
+}
+.btn-dark {
+    background-color: blue;
+    transition: 250ms ease-in-out;
+    margin-top: 5%;
+}
